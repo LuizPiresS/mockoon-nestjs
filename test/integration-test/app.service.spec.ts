@@ -1,15 +1,16 @@
 import { HttpModule, HttpService } from '@nestjs/axios';
 import { Test } from '@nestjs/testing';
+import { AppService } from '../../src/app.service';
 
-describe('AnymarketService', () => {
-  let anymarketService: AnymarketService;
+describe('AppService', () => {
+  let wsapiService: AppService;
   let service: HttpService;
 
   beforeEach(async () => {
     const module = await Test.createTestingModule({
       imports: [HttpModule],
       providers: [
-        AnymarketService,
+        AppService,
         {
           provide: HttpService,
           useValue: service,
@@ -17,19 +18,20 @@ describe('AnymarketService', () => {
       ],
     }).compile();
 
-    anymarketService = await module.resolve<AnymarketService>(AnymarketService);
+    wsapiService = await module.resolve<AppService>(AppService);
   });
 
-  describe('AnymarketService List', () => {
+  describe('AppService', () => {
     it('should be defined', async () => {
-      expect(anymarketService).toBeDefined();
+      expect(wsapiService).toBeDefined();
     });
 
-    describe('list', () => {
-      it('should return core', async () => {
-        await anymarketService.setup(sample.anymarketConfig);
-
-        const result = (await anymarketService.list().next()).value;
+    describe('getCharacterData', () => {
+      it('should return character data', async () => {
+        const result = await wsapiService.getCharacterData(
+          'https://swapi.dev/api/people',
+          '1',
+        );
         expect(result).toEqual({
           items: {
             content: [
