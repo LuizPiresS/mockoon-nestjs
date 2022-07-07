@@ -1,0 +1,67 @@
+{
+  "uuid": "08087304-d21a-4a1b-a198-731bfcb116f1",
+  "lastMigration": 19,
+  "name": "Mock external api",
+  "endpointPrefix": "",
+  "latency": 0,
+  "port": 3003,
+  "hostname": "0.0.0.0",
+  "routes": [
+    {
+      "uuid": "80af0168-21c7-4c9e-b135-4fea73d35ed8",
+      "documentation": "",
+      "method": "get",
+      "endpoint": "swapi",
+      "responses": [
+        {
+          "uuid": "781bb51d-a87d-4cc0-836f-d4a9788fbf62",
+          "body": "{\n\t\"name\": \"R2-D2\",\n\t\"height\": \"96\",\n\t\"mass\": \"32\",\n\t\"hair_color\": \"n/a\",\n\t\"skin_color\": \"white, blue\",\n\t\"eye_color\": \"red\",\n\t\"birth_year\": \"33BBY\",\n\t\"gender\": \"n/a\",\n\t\"homeworld\": \"https://swapi.dev/api/planets/8/\",\n\t\"films\": [\n\t\t\"https://swapi.dev/api/films/1/\",\n\t\t\"https://swapi.dev/api/films/2/\",\n\t\t\"https://swapi.dev/api/films/3/\",\n\t\t\"https://swapi.dev/api/films/4/\",\n\t\t\"https://swapi.dev/api/films/5/\",\n\t\t\"https://swapi.dev/api/films/6/\"\n\t],\n\t\"species\": [\n\t\t\"https://swapi.dev/api/species/2/\"\n\t],\n\t\"vehicles\": [],\n\t\"starships\": [],\n\t\"created\": \"2014-12-10T15:11:50.376000Z\",\n\t\"edited\": \"2014-12-20T21:17:50.311000Z\",\n\t\"url\": \"https://swapi.dev/api/people/3/\"\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "filePath": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false
+        }
+      ],
+      "enabled": true,
+      "randomResponse": false,
+      "sequentialResponse": false
+    }
+  ],
+  "proxyMode": false,
+  "proxyHost": "",
+  "proxyRemovePrefix": false,
+  "tlsOptions": {
+    "enabled": false,
+    "type": "CERT",
+    "pfxPath": "",
+    "certPath": "",
+    "keyPath": "",
+    "caPath": "",
+    "passphrase": ""
+  },
+  "cors": true,
+  "headers": [
+    {
+      "key": "Content-Type",
+      "value": "application/json"
+    }
+  ],
+  "proxyReqHeaders": [
+    {
+      "key": "",
+      "value": ""
+    }
+  ],
+  "proxyResHeaders": [
+    {
+      "key": "",
+      "value": ""
+    }
+  ]
+}
