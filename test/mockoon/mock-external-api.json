@@ -11,7 +11,7 @@
       "uuid": "80af0168-21c7-4c9e-b135-4fea73d35ed8",
       "documentation": "",
       "method": "get",
-      "endpoint": "swapi",
+      "endpoint": "mock-swapi/:id",
       "responses": [
         {
           "uuid": "781bb51d-a87d-4cc0-836f-d4a9788fbf62",

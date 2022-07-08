@@ -1,73 +1,38 @@
-<p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="200" alt="Nest Logo" /></a>
-</p>
+# Mockando APIs externas com mockoon
 
-[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
-[circleci-url]: https://circleci.com/gh/nestjs/nest
+Esta poc se trata de como mockar uma conexão externa utilizando a ferramenta (Mockoon)[https://mockoon.com/]
 
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
-    <p align="center">
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
-<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
-<a href="https://coveralls.io/github/nestjs/nest?branch=master" target="_blank"><img src="https://coveralls.io/repos/github/nestjs/nest/badge.svg?branch=master#9" alt="Coverage" /></a>
-<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
-<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg"/></a>
-    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
-  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow"></a>
-</p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
+[Documentação](https://mockoon.com/docs/latest/gui-cheat-sheet/)
 
-## Description
+[Features](https://mockoon.com/features/)
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+**Interface**
+![Tela principal](docs/images/routes-view.png)
+![Configuração dos endpoints](docs/images/responses-view.png)
+![Logs](docs/images/logs-view.png)
+![Proxy](docs/images/proxy-view.png)
+![Configurações](docs/images/settings-view.png)
 
-## Installation
 
-```bash
-$ npm install
-```
 
-## Running the app
 
-```bash
-# development
-$ npm run start
+## Introdução:
 
-# watch mode
-$ npm run start:dev
+Teste Automatizado deve ser considerado como uma parte essencial no processo de desenvolvimento de um software moderno, onde as mudanças são constantes e necessárias. Os testes dão a segurança para equipe de desenvolvimento consiga implementar as mudanças solicitadas pelo negócio sem quebrar o que já está funcionando.
 
-# production mode
-$ npm run start:prod
-```
+![Piramide de testes](docs/images/1_NQ7s8qic4dz2-zGcTpFxfA.png)
+A piramide de testes foi criada por Martin Fowler e ela tem como objetivo nortear os diversos niveis de testes de uma aplicação, com ela também conseguimos estimar os custos de cada teste e a quantidade de testes que devemos ter para que nossa aplicação tenha um ciclo de vida saúdavel.
 
-## Test
+**Testes unitarios**
 
-```bash
-# unit tests
-$ npm run test
+São aplicados na menor unidade de código possivel (métodos ou funções). São com os testes unitarios que testamos as regras de negocios e garantimos que as mesmas estão funcionando.
 
-# e2e tests
-$ npm run test:e2e
+**Testes de integração**
 
-# test coverage
-$ npm run test:cov
-```
+Verifica se uma funcionalidade está realmente funcionando corretamente, ou seja, testa um conjunto de métodos necessários para que algo aconteça.
 
-## Support
+Por exemplo: uma classe responsável por  "pegar" um conjunto de dados em uma api e transformar em um XML. A classe terá um método para conexão com a api e outro método  para a transformação dos dados em XML. O teste verificará se os dois métodos estão trabalhando em conjunto, o componente responsável realizará uma conexão real a uma api externa  e entregará estes dados para que o método formate os dados.
 
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
 
-## Stay in touch
-
-- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
-
-## License
-
-Nest is [MIT licensed](LICENSE).
+![Piramide de testes](../../../Imagens/artigos/Captura de Tela-20220527141325-803x457.png)
+![Responsabilidades do time](docs/images/1_OpS04weNMWP17Izf3zU_Pg.png)
